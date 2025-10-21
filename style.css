@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #461a5f, #18cbe2);
+  color: white;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 15px;
+  background: rgba(187, 245, 29, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  animation: slideUp 1s ease-out;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid #00ffcc;
+  animation: float 3s ease-in-out infinite;
+}
+
+.name {
+  font-size: 2rem;
+  margin-top: 10px;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.contact a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+h2 {
+  color: #00ffcc;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #00ffcc;
+  display: inline-block;
+  animation: fadeSlide 1.5s ease-out;
+}
+
+section {
+  margin-top: 20px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px hsl(177, 90%, 52%);
+}
+
+ul {
+  list-style: square inside;
+  margin-left: 10px;
+}
+
+p, li {
+  line-height: 1.6;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes fadeSlide {
+  0% { opacity: 0; transform: translateX(-20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* ===== Responsive for Mobile ===== */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 8px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
